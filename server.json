@@ -7,6 +7,10 @@
     {
       "id": "calcas",
       "title": "Calças"
+    },
+    {
+      "id": "meias",
+      "title": "Meias"
     }
   ],
   "products": [
@@ -37,6 +41,20 @@
       "price": 109.9,
       "category_id": "calcas",
       "slug": "calca-azul-react"
+    },
+    {
+      "id": 5,
+      "title": "Meia Node.js",
+      "price": 50.1,
+      "category_id": "meias",
+      "slug": "meia-node-js"
+    },
+    {
+      "id": 6,
+      "title": "Meia React JS",
+      "price": 60.5,
+      "category_id": "meias",
+      "slug": "meia-react-js"
     }
   ],
   "recommended": [

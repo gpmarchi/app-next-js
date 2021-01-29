@@ -13,6 +13,10 @@ interface CategoryProps {
 export default function Category({ products }: CategoryProps) {
   const router = useRouter();
 
+  if (router.isFallback) {
+    return <p>Carregando...</p>
+  }
+
   return (
     <div>
       <h1>{router.query.slug}</h1>
@@ -40,11 +44,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   })
 
-  console.log(paths);
-
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
