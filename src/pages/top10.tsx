@@ -10,13 +10,13 @@ interface Top10Props {
 }
 
 export default function Top10({ products }: Top10Props) {
-	return(
+	return (
 		<div>
 			<h1>Top 10</h1>
 
 			<ul>
 				{products.map(product => {
-					return(
+					return (
 						<li key={product.id}>
 							{product.title}
 						</li>
@@ -28,7 +28,7 @@ export default function Top10({ products }: Top10Props) {
 }
 
 export const getStaticProps: GetStaticProps<Top10Props> = async (context) => {
-	const response = await fetch('http://localhost:3333/products');
+	const response = await fetch(`${process.env.API_URL}/products`);
 	const products = await response.json();
 
 	return {
